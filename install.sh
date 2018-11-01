@@ -20,6 +20,10 @@ sudo apt-get -y upgrade
 echo "installing essentials"
 sudo apt-get -y install build-essential make cmake ccache pkg-config automake autoconf libc++-dev clang-6.0 clang-format-6.0 python2.7-dev python3-dev
 
+#install openssh-server
+echo "installing openssh-server"
+sudo apt-get -y install openssh-server
+
 #install libs
 echo "installing libs"
 sudo apt-get -y install libncurses5-dev libsdl2-dev
