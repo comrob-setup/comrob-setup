@@ -5,6 +5,7 @@ MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
 
 APPCONFIG_PATH=$MY_PATH/appconfig
+PRIVATE_PATH=$MY_PATH/private
 MISC_PATH=$MY_PATH/misc
 
 cd $MY_PATH
@@ -54,6 +55,9 @@ bash $APPCONFIG_PATH/ros/install.sh "$@"
 
 #install python libs
 bash $APPCONFIG_PATH/python/install.sh "$@"
+
+#install python libs
+bash $PRIVATE_PATH/install.sh "$@"
 
 #add aliases
 sudo ln -s /usr/bin/xdg-open /usr/bin/open
