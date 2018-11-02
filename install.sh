@@ -41,24 +41,19 @@ echo "installing video processing"
 sudo apt-get -y install vlc mplayer ffmpeg
 
 #install vim
-echo "installing vim"
-bash $APPCONFIG_PATH/vim/install.sh
+bash $APPCONFIG_PATH/vim/install.sh "$@"
 
 #install tmux
-echo "installing tmux"
-bash $APPCONFIG_PATH/tmux/install.sh
+bash $APPCONFIG_PATH/tmux/install.sh "$@"
 
 #install opencv
-echo "installing opencv"
-bash $APPCONFIG_PATH/opencv/install.sh
+bash $APPCONFIG_PATH/opencv/install.sh "$@"
 
 #install ros
-echo "installing ros"
-bash $APPCONFIG_PATH/ros/install.sh
+bash $APPCONFIG_PATH/ros/install.sh "$@"
 
 #install python libs
-echo "installing python libs"
-bash $APPCONFIG_PATH/python/install.sh
+bash $APPCONFIG_PATH/python/install.sh "$@"
 
 #add aliases
 sudo ln -s /usr/bin/xdg-open /usr/bin/open
