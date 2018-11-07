@@ -1,5 +1,7 @@
 ###!/bin/bash
 
+sudo -i exit # log in
+
 #get the path to this script
 MY_PATH=`dirname "$0"`
 MY_PATH=`( cd "$MY_PATH" && pwd )`
@@ -40,6 +42,10 @@ sudo apt-get -y install cifs-utils
 #video processing 
 echo "installing video processing"
 sudo apt-get -y install vlc mplayer ffmpeg
+
+#tex 
+echo "installing tex"
+sudo apt-get -y install texlive-full
 
 #install vim
 bash $APPCONFIG_PATH/vim/install.sh "$@"
